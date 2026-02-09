@@ -1,0 +1,19 @@
+{
+  "name": "lang_chain_js",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.html",
+  "window": {
+    "width": 800,
+    "height": 600
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
