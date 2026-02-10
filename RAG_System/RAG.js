@@ -1,11 +1,14 @@
 import {v4 as uuid4} from 'uuid'
 import ConversationMemory from './conversation_memory.js'
-import {ChatOllama} from '@langchain/ollama'
+import {ChatOllama, OllamaEmbeddings} from '@langchain/ollama'
 import {PromptTemplate} from '@langchain/core/prompts'
 import { StringOutputParser } from '@langchain/core/output_parsers'
-import {vector_store} from './config.js'
+import {FaissStore} from '@langchain/community/vectorstores/faiss'
 
 let llm = new ChatOllama({model: 'llama3.2:3b'})
+let embeddings = new OllamaEmbeddings({model: 'all-minilm:22m'})
+let vector_store = await FaissStore.load('../docs/faiss_idx', embeddings)
+
 let generate_response = async ({user_input, thread_id}) => {
     let memory = new ConversationMemory(thread_id)
     let standalone_question_prompt = PromptTemplate.fromTemplate(`
@@ -24,13 +27,35 @@ let generate_response = async ({user_input, thread_id}) => {
         history: await memory.history()
     })
 
-    let retrieved_docs = await vector_store.similaritySearch(standalone_question)
-    return retrieved_docs
+    let retriever = vector_store.asRetriever()
+    let retrieved_docs = await retriever.invoke(standalone_question)
+    let retrieved_text = retrieved_docs.map(doc => doc.pageContent)
+    let context = retrieved_text.join('\n\n')
+
+    let final_prompt = PromptTemplate.fromTemplate(`
+        Based on the following context and conversational history (if any),
+        answer user question.
+        * Context: {context}
+        * History: {history}
+        * User question: {user_input}
+        * Answer:
+    `.trim())
+    let final_chain = final_prompt
+        .pipe(llm)
+        .pipe(new StringOutputParser())
+    let final_result = await final_chain.invoke({
+        context,
+        user_input,
+        history: await memory.history()
+    })
+    await memory.save({role: 'User', content: user_input})
+    await memory.save({role: 'AI', content: final_result})
+    return final_result
 }
 
 
 
-let user_input = 'My name is Yope, What is microscope?'
+let user_input = 'What is the difference between light and electron microscope.'
 // let thread_id = uuid4()
 
 

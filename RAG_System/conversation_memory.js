@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'fs/promises';
 class ConversationMemory {
     constructor(thread_id) {
         this.thread_id = thread_id;
-        this.memory_filepath = './.conversation_memory.json';
+        this.memory_filepath = './conversation_memory.json';
     }
 
     async save({ role, content }) {
@@ -52,13 +52,8 @@ class ConversationMemory {
     async history() {
         let data = await this.get() || []
         let data_list = data.map(e => (`${e.role}: ${e.content}`))
-        return data_list.join('\n')
+        return data_list.join('\n\n')
     }
 }
 
 export default ConversationMemory
-// let memory = new ConversationMemory('new-thread-1')
-
-// console.log(
-//    await memory.history()
-// );

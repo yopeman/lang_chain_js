@@ -3,7 +3,6 @@ import { MemorySaver } from "@langchain/langgraph";
 import { HumanMessage } from "@langchain/core/messages";
 import * as z from "zod";
 import { randomUUID } from "crypto";
-import {PostgresSaver} from '@langchain/langgraph-checkpoint-postgres'
 
 
 const systemPrompt = `
@@ -48,16 +47,13 @@ const responseFormat = z.object({
 });
 
 const checkpointer = new MemorySaver();
-// const DB_URL = 'postgressql://root:12345678@localhost:5432/lang_chain_db?sslmode=disable'
-// const checkpointer = PostgresSaver.fromConnString(DB_URL)
-// await checkpointer.setup()
 
 function createMathAgent() {
   return createAgent({
     model,
     systemPrompt,
     tools: [calculator],
-    responseFormat,
+    // responseFormat,
     checkpointer,
   });
 }
@@ -78,4 +74,6 @@ const response = await agent.invoke({
     config
 );
 
-console.log("Structured Answer:", response.structuredResponse?.answer);
+console.log("AI response:", response);
+console.log("Answer:", response.messages[1].content);
+console.log("Structured Answer:", response.structuredResponse);

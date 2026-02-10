@@ -1,6 +1,10 @@
 import {PDFLoader} from '@langchain/community/document_loaders/fs/pdf'
 import {RecursiveCharacterTextSplitter} from '@langchain/textsplitters'
-import {vector_store} from './config.js'
+import {OllamaEmbeddings} from '@langchain/ollama'
+import {FaissStore} from '@langchain/community/vectorstores/faiss'
+
+let embeddings = new OllamaEmbeddings({model: 'all-minilm:22m'})
+let vector_store = new FaissStore(embeddings, {})
 
 let embed_document = async (pdf_filepath) => {
     let loader = new PDFLoader(pdf_filepath)
@@ -13,6 +17,7 @@ let embed_document = async (pdf_filepath) => {
 
     let splitted_docs = await splitter.splitDocuments(docs)
     await vector_store.addDocuments(splitted_docs)
+    await vector_store.save('../docs/faiss_idx')
     return true
 }
 
