@@ -15,5 +15,20 @@
   },
   "scripts": {
     "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@langchain/classic": "^1.0.16",
+    "@langchain/community": "^1.1.13",
+    "@langchain/core": "^1.1.19",
+    "@langchain/groq": "^1.1.0",
+    "@langchain/langgraph": "^1.1.4",
+    "@langchain/langgraph-checkpoint-postgres": "^1.0.0",
+    "@langchain/mongodb": "^1.1.0",
+    "@langchain/ollama": "^1.2.2",
+    "dotenv": "^17.2.4",
+    "langchain": "^1.2.18",
+    "mongodb": "^7.1.0",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^13.0.0"
   }
 }

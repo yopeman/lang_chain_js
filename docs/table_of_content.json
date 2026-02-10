@@ -1,0 +1,325 @@
+{
+  "textbook_title": "Biology Student Textbook Grade 9",
+  "units": [
+    {
+      "unit_number": 1,
+      "unit_title": "Introduction to Biology",
+      "sections": [
+        {
+          "section_title": "Definition of Biology",
+          "starting_page": 8
+        },
+        {
+          "section_title": "Why do we study Biology?",
+          "starting_page": 9
+        },
+        {
+          "section_title": "The Scientific Method",
+          "starting_page": 9
+        },
+        {
+          "section_title": "Tools of a Biologist",
+          "subsections": [
+            {
+              "subsection_title": "Laboratory tools of biologist",
+              "starting_page": 12
+            },
+            {
+              "subsection_title": "Field tools",
+              "starting_page": 17
+            }
+          ]
+        },
+        {
+          "section_title": "The Light Microscope",
+          "subsections": [
+            {
+              "subsection_title": "The parts and function of the light microscope",
+              "starting_page": 18
+            },
+            {
+              "subsection_title": "Handling and using a light microscope",
+              "starting_page": 20
+            }
+          ]
+        },
+        {
+          "section_title": "General Laboratory Safety Rules",
+          "starting_page": 21
+        }
+      ]
+    },
+    {
+      "unit_number": 2,
+      "unit_title": "Characteristics and Classification of Organisms",
+      "sections": [
+        {
+          "section_title": "Characteristics of living things",
+          "starting_page": 26
+        },
+        {
+          "section_title": "Taxonomy of living things",
+          "subsections": [
+            {
+              "subsection_title": "Principles of classification",
+              "starting_page": 28
+            },
+            {
+              "subsection_title": "Taxonomic hierarchies in biological classification",
+              "starting_page": 29
+            }
+          ]
+        },
+        {
+          "section_title": "Relevance of classification",
+          "starting_page": 31
+        },
+        {
+          "section_title": "Linnaean system of nomenclature",
+          "starting_page": 32
+        },
+        {
+          "section_title": "Common Ethiopian animals and plants",
+          "starting_page": 33
+        },
+        {
+          "section_title": "The five-kingdom system of classification",
+          "subsections": [
+            {
+              "subsection_title": "Kingdom Monera",
+              "starting_page": 37
+            },
+            {
+              "subsection_title": "Kingdom Protista",
+              "starting_page": 38
+            },
+            {
+              "subsection_title": "Kingdom Fungi",
+              "starting_page": 40
+            },
+            {
+              "subsection_title": "Kingdom Plantae",
+              "starting_page": 42
+            },
+            {
+              "subsection_title": "Kingdom Animalia",
+              "starting_page": 43
+            }
+          ]
+        },
+        {
+          "section_title": "Renowned Taxonomists in Ethiopia",
+          "starting_page": 46
+        }
+      ]
+    },
+    {
+      "unit_number": 3,
+      "unit_title": "Cells",
+      "sections": [
+        {
+          "section_title": "What is a cell?",
+          "starting_page": 51
+        },
+        {
+          "section_title": "Cell theory",
+          "starting_page": 52
+        },
+        {
+          "section_title": "Cell structure and function",
+          "starting_page": 53
+        },
+        {
+          "section_title": "Types of cells",
+          "starting_page": 60
+        },
+        {
+          "section_title": "Animal and plant cells",
+          "starting_page": 61
+        },
+        {
+          "section_title": "Observing cells under a microscope",
+          "starting_page": 63
+        },
+        {
+          "section_title": "The cell and its environment",
+          "subsections": [
+            {
+              "subsection_title": "Passive transport",
+              "starting_page": 66
+            },
+            {
+              "subsection_title": "Active transport",
+              "starting_page": 75
+            }
+          ]
+        },
+        {
+          "section_title": "Levels of Biological Organization",
+          "starting_page": 75
+        }
+      ]
+    },
+    {
+      "unit_number": 4,
+      "unit_title": "Reproduction",
+      "sections": [
+        {
+          "section_title": "Introduction to reproduction",
+          "starting_page": 81
+        },
+        {
+          "section_title": "Asexual reproduction",
+          "starting_page": 82
+        },
+        {
+          "section_title": "Types of asexual reproduction",
+          "subsections": [
+            {
+              "subsection_title": "Fission",
+              "starting_page": 83
+            },
+            {
+              "subsection_title": "Fragmentation",
+              "starting_page": 83
+            },
+            {
+              "subsection_title": "Budding",
+              "starting_page": 84
+            },
+            {
+              "subsection_title": "Vegetative propagation",
+              "starting_page": 85
+            },
+            {
+              "subsection_title": "Parthenogenesis",
+              "starting_page": 88
+            }
+          ]
+        },
+        {
+          "section_title": "Sexual reproduction in Humans",
+          "starting_page": 88
+        },
+        {
+          "section_title": "Primary and secondary sexual characteristics",
+          "starting_page": 89
+        },
+        {
+          "section_title": "Male reproductive structures",
+          "starting_page": 91
+        },
+        {
+          "section_title": "Female reproductive structures",
+          "starting_page": 93
+        },
+        {
+          "section_title": "The Menstrual cycle",
+          "starting_page": 95
+        },
+        {
+          "section_title": "Fertilization and pregnancy",
+          "starting_page": 97
+        },
+        {
+          "section_title": "Methods of birth control",
+          "starting_page": 99
+        },
+        {
+          "section_title": "Sexually transmitted infections (STIs): Transmission and prevention",
+          "starting_page": 104
+        }
+      ]
+    },
+    {
+      "unit_number": 5,
+      "unit_title": "Human Health, Nutrition, and Disease",
+      "sections": [
+        {
+          "section_title": "What is food?",
+          "starting_page": 112
+        },
+        {
+          "section_title": "Nutrition",
+          "starting_page": 113
+        },
+        {
+          "section_title": "Nutrients",
+          "starting_page": 113
+        },
+        {
+          "section_title": "Balanced diets",
+          "starting_page": 117
+        },
+        {
+          "section_title": "Deficiency diseases",
+          "starting_page": 119
+        },
+        {
+          "section_title": "Malnutrition",
+          "starting_page": 122
+        },
+        {
+          "section_title": "Substance abuse",
+          "starting_page": 124
+        },
+        {
+          "section_title": "Infectious and noninfectious diseases",
+          "subsections": [
+            {
+              "subsection_title": "Infectious diseases",
+              "starting_page": 134
+            },
+            {
+              "subsection_title": "Non-infectious diseases",
+              "starting_page": 143
+            }
+          ]
+        },
+        {
+          "section_title": "Renowned Nutritionists in Ethiopia",
+          "starting_page": 143
+        }
+      ]
+    },
+    {
+      "unit_number": 6,
+      "unit_title": "Ecology",
+      "sections": [
+        {
+          "section_title": "Ecology",
+          "subsections": [
+            {
+              "subsection_title": "Definitions of Common Ecological Terms",
+              "starting_page": 146
+            },
+            {
+              "subsection_title": "Biotic and abiotic components",
+              "starting_page": 147
+            },
+            {
+              "subsection_title": "Ecological levels",
+              "starting_page": 146
+            },
+            {
+              "subsection_title": "Ecosystems",
+              "starting_page": 146
+            },
+            {
+              "subsection_title": "Biomes",
+              "starting_page": 146
+            },
+            {
+              "subsection_title": "Ecological succession",
+              "starting_page": 146
+            }
+          ]
+        },
+        {
+          "section_title": "Ecological relationships",
+          "starting_page": 146
+        }
+      ]
+    }
+  ]
+}

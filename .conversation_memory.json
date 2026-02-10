@@ -1,0 +1,16 @@
+{
+  "new-thread-1": [
+    {
+      "role": "user",
+      "content": "ksdhjs"
+    },
+    {
+      "role": "ai",
+      "content": "ksdhjs"
+    },
+    {
+      "role": "admin",
+      "content": "ksdhjs"
+    }
+  ]
+}

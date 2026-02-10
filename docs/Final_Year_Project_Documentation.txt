@@ -1,4 +1,4 @@
-﻿Bahir Dar University
+Bahir Dar University
 Bahir Dar Institute of Technology 
 Faculty of Computing 
 Requirement Analysis Document (RAD)
@@ -2547,6 +2547,135 @@ Restricted Access
 Authentication and Authorization
    * All users must authenticate using valid credentials (email or phone number and password).
    * Passwords are securely stored using industry-standard hashing algorithms.
+   * After successful authentication, permissions are assigned based on the user’s role.
+Authorization checks are enforced at:
+   * Application level (API and UI access control)
+   * Database level (role-validated queries)
+Data Access Control
+   * Users can access only their own data unless explicitly authorized by their role.
+   * Tutors can access student data only within their assigned batches.
+   * Administrators have full read and write access to all system data.
+   * Sensitive data (e.g., payments, personal information, voice recordings) is protected and never exposed to unauthorized roles.
+Account Status Control
+Each user account operates under one of the following statuses:
+   * Active – Full access according to assigned role
+   * Suspended – Login permitted, but access to learning and payment features is restricted
+   * Deactivated – No system access
+Only administrators are authorized to change account status.
+Security Mechanisms
+The system implements multiple security measures, including:
+   * Limited login attempts to prevent brute-force attacks
+   * Temporary account locking after multiple failed login attempts
+   * Secure communication using HTTPS
+   * Role validation on every API request
+   * Audit logs for critical actions (e.g., payments, content updates, account status changes)
+   * Regular data backups with restricted restoration access (administrator-only)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+   1. FastAPI, "FastAPI documentation: Python web framework for building APIs," 2020. [Online]. Available: https://fastapi.tiangolo.com
+   2. React Native, "React Native: Create native apps for Android and iOS using React," 2020. [Online]. Available: https://reactnative.dev
+   3. LangChain, "LangChain documentation: Building applications with LLMs," 2023. [Online]. Available: https://python.langchain.com
+   4. Jitsi, "Jitsi Meet API documentation," 2020. [Online]. Available: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe
+   5. Chapa, "Chapa API documentation: Ethiopian payment gateway," 2020. [Online]. Available: https://developer.chapa.co
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appendix
+Age group:
+   * Under 18
+   * 18–25
+   * 26–35
+   * 36+
+Current English proficiency level:
+   * Beginner
+   * Intermediate
+   * Advanced
+
+
+What are the main difficulties you face when learning English online?
+   * Lack of motivation
+   * Limited tutor access
+   * Payment issues
+
+Rank the following features by importance:
+   * Live tutor sessions
+   * Communityd hashing algorithms.
    * After successful authentication, permissions are assigned based on the user’s role.
 Authorization checks are enforced at:
    * Application level (API and UI access control)
