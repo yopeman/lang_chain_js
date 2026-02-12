@@ -32,7 +32,8 @@
     "faiss-node": "^0.5.1",
     "langchain": "^1.2.18",
     "mongodb": "^7.1.0",
-    "pdf-parse": "^1.1.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.4",
     "uuid": "^13.0.0"
   }
 }

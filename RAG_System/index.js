@@ -29,7 +29,13 @@ let generate_response = async ({user_input, thread_id}) => {
 
     let retriever = vector_store.asRetriever()
     let retrieved_docs = await retriever.invoke(standalone_question)
-    let retrieved_text = retrieved_docs.map(doc => doc.pageContent)
+    let retrieved_text = retrieved_docs.map(doc => {
+        // console.log(doc);
+        
+        let t = `${doc.pageContent}(Grade 9 Biology Book, Page - ${doc.metadata.loc.pageNumber})`
+        // console.log(t);        
+        return t
+    })
     let context = retrieved_text.join('\n\n')
 
     let final_prompt = PromptTemplate.fromTemplate(`
@@ -55,10 +61,15 @@ let generate_response = async ({user_input, thread_id}) => {
 
 
 
-let user_input = 'What is the difference between light and electron microscope.'
+let user_input = `
+What is the difference between light and electron microscope
+You must be cite your reference
+ANSWER:
+REFERENCE:
+`.trim()
 // let thread_id = uuid4()
 
 
 
-let answer = await generate_response({user_input, thread_id: 'new-thread-1'})
+let answer = await generate_response({user_input, thread_id: 'new-thread-3'})
 console.log(answer);
