@@ -26,6 +26,4 @@ async function splitAndExtract(pdfPath) {
     return results;
 }
 
-let results = await splitAndExtract('../docs/G9-Biology-STB-2023-web.pdf')
-console.log(results[5].content);
-console.log(results[6].content);
+export default splitAndExtract
